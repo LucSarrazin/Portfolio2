@@ -19,11 +19,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (mail($to, $subject, $body, $headers)) {
         echo "Message envoyé avec succès.";
+        echo "<script>console.log('Message envoyé avec succès.');</script>";
     } else {
         echo "Échec de l'envoi du message.";
+        echo "<script>console.log('Échec de l'envoi du message.');</script>";
     }
 } else {
     echo "Méthode de requête non autorisée.";
+        echo "<script>console.log('Méthode de requête non autorisée.');</script>";
 }
 ?>
 
